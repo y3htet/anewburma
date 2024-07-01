@@ -17,7 +17,7 @@ const ThumballItem = ({ item, setBackground }: { item: CarouselTypes; setBackgro
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "linear", delay: 2 + item.rid / 2 }}
-      className='w-[150px] h-[220px] shrink-0 relative overflow-hidden rounded-xl shadow-sm shadow-white hidden lg:flex cursor-pointer '
+      className='w-[150px] h-[220px] shrink-0 relative overflow-hidden rounded-xl shadow-sm shadow-white hidden lg:flex cursor-pointer'
     >
       <Image 
         unoptimized={true}

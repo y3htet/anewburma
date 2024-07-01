@@ -133,5 +133,15 @@ export const campaign = [
         image: "/images/fly.jpeg",
         btn_1: "take a ride",
         btn_2: "get it"
+    },
+    {
+        id: 10,
+        category: "Air Stike",
+        title: "A New Burma",
+        subtitle: "Free Burma",
+        content: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dolorem quia beatae aspernatur fugit expedita! Porro quis necessitatibus iusto ipsam dicta sint earum dolores fuga cum numquam dolore, suscipit rerum.",
+        image: "/images/fly.jpeg",
+        btn_1: "take a ride",
+        btn_2: "get it"
     }
 ]
