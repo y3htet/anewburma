@@ -2,7 +2,7 @@ import { CarouselTypes } from '@/types'
 import React from 'react'
 import ThumballItem from './thumball-item';
 
-const Thumball = ({ hero, setBackground}: {
+const Thumball = ({ hero, setBackground }: {
     hero: CarouselTypes []; setBackground: (value: string) => void
 }) => {
   return (
