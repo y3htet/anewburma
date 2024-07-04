@@ -1,15 +1,22 @@
-import { cn } from '@/lib/utils';
-import { CampaignEventTypes, CarouselTypes } from '@/types';
-import React from 'react';
-import Image from 'next/image';
-import Container from '@/components/ui/container';
-import { motion } from 'framer-motion';
-import ButtonStyleOne from '@/components/ui/button-style-one';
-import ButtonStyleTwo from '@/components/ui/button-style-two';
+import { cn } from "@/lib/utils";
+import { CampaignEventTypes, CarouselTypes } from "@/types";
+import React from "react";
+import Image from "next/image";
+import Container from "@/components/ui/container";
+import { motion } from "framer-motion";
+import ButtonStyleOne from "@/components/ui/button-style-one";
+import ButtonStyleTwo from "@/components/ui/button-style-two";
+import { hero } from "@/constants";
 
-const CampaignEventItem = ({ item, background }: { item: CampaignEventTypes; background: string }) => {
+const CampaignEventItem = ({
+  item,
+  background,
+}: {
+  item: CampaignEventTypes;
+  background: string;
+}) => {
   return (
-    <div className={cn('w-full absolute top-0 left-0 bottom-0 right-0 z-20 ')}>
+    <div className={cn("w-full absolute top-0 left-0 bottom-0 right-0 z-20 ")}>
       {/* <Image
         unoptimized
         src={background}
@@ -18,101 +25,100 @@ const CampaignEventItem = ({ item, background }: { item: CampaignEventTypes; bac
         alt="carousel background"
         className={cn('w-full h-full object-cover absolute')}
       /> */}
-      {/* carousel content */} 
-      <Container >
-        <div className='absolute top-[18%] w-screen max-w-[80%] flex flex-col gap-4 '> 
-        
-        <motion.div 
-          className='font-thin text-md tracking-widest uppercase leading-snug'
-          initial={{
+      {/* carousel content */}
+      <Container>
+        <div className="absolute top-[18%] w-screen max-w-[60%] flex flex-col gap-4 ">
+          <motion.div
+            className="font-thin text-md tracking-widest uppercase leading-snug"
+            initial={{
               opacity: 0,
               y: 50,
-              filter: "blur(20px)"
-          }}
-          animate={{
+              filter: "blur(20px)",
+            }}
+            animate={{
               opacity: 1,
               y: 0,
-              filter: "blur(0)"
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "linear",
-            delay: 0
-          }}
-        >
-          {item.category}
-        </motion.div>
+              filter: "blur(0)",
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "linear",
+              delay: 0,
+            }}
+          >
+            {item.category}
+          </motion.div>
 
-        <motion.div 
-          className='font-extrabold tracking-wide shadow-inner text-4xl md:text-4xl leading-snug uppercase'
-          initial={{
+          <motion.div
+            className="font-extrabold tracking-wide shadow-inner text-4xl md:text-4xl leading-snug uppercase"
+            initial={{
               opacity: 0,
               y: 50,
-              filter: "blur(20px)"
-          }}
-          animate={{
+              filter: "blur(20px)",
+            }}
+            animate={{
               opacity: 1,
               y: 0,
-              filter: "blur(0)"
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "linear",
-            delay: 0.2
-          }}
-        >
-          {item.title}
-        </motion.div>
+              filter: "blur(0)",
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "linear",
+              delay: 0.2,
+            }}
+          >
+            {item.title}
+          </motion.div>
 
-        <motion.div 
-          className='font-extrabold tracking-wide shadow-inner text-4xl md:text-3xl leading-snug uppercase text-primary-500'
-          initial={{
+          <motion.div
+            className="font-extrabold tracking-wide shadow-inner text-4xl md:text-3xl leading-snug uppercase text-primary-500"
+            initial={{
               opacity: 0,
               y: 50,
-              filter: "blur(20px)"
-          }}
-          animate={{
+              filter: "blur(20px)",
+            }}
+            animate={{
               opacity: 1,
               y: 0,
-              filter: "blur(0)"
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "linear",
-            delay: 0.4
-          }}
-        >
-          {item.date}
-        </motion.div>
+              filter: "blur(0)",
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "linear",
+              delay: 0.4,
+            }}
+          >
+            {item.date}
+          </motion.div>
 
-        <motion.div 
-          className='w-full h-40 relative'
-          initial={{
+          <motion.div
+            className="w-full h-40 relative"
+            initial={{
               opacity: 0,
               y: 50,
-              filter: "blur(20px)"
-          }}
-          animate={{
+              filter: "blur(20px)",
+            }}
+            animate={{
               opacity: 1,
               y: 0,
-              filter: "blur(0)"
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "linear",
-            delay: 0.6
-          }}
-        >
-          <Image
-            src={item.image}
-            alt={item.category}
-            width={200}
-            height={200}
-            className='rounded-lg shadow-md'
-          />
-        </motion.div>
+              filter: "blur(0)",
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "linear",
+              delay: 0.6,
+            }}
+          >
+            <Image
+              src={item.image}
+              alt={item.category}
+              width={200}
+              height={200}
+              className="rounded-lg shadow-md"
+            />
+          </motion.div>
 
-        {/* <motion.div 
+          {/* <motion.div 
           className='text-lg md:text-xl/loose max-w-xs sm:max-w-2xl'
           initial={{
               opacity: 0,
@@ -133,7 +139,7 @@ const CampaignEventItem = ({ item, background }: { item: CampaignEventTypes; bac
           {item.content}
         </motion.div> */}
 
-        {/* <motion.div
+          {/* <motion.div
               initial={{
                opacity: 0,
                y: 50,
@@ -158,11 +164,88 @@ const CampaignEventItem = ({ item, background }: { item: CampaignEventTypes; bac
           <ButtonStyleTwo title={item.btn_1} className='bg-transparent ' />
 
         </motion.div> */}
-         
-
-         </div>
-        
+        </div>
       </Container>
+      <div className="absolute right-[5%] top-[18%] w-screen max-w-[40%] h-full flex flex-col gap-4 p-4">
+        <motion.div
+          className="w-full h-32 relative"
+          initial={{
+            opacity: 0,
+            x: 50,
+            filter: "blur(20px)",
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0)",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "linear",
+            delay: 0.6,
+          }}
+        >
+          <Image
+            src={hero[1].image}
+            alt="Image 1"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg shadow-md"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full h-32 relative -mt-20 ml-4"
+          initial={{
+            opacity: 0,
+            x: 50,
+            filter: "blur(20px)",
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0)",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "linear",
+            delay: 0.8,
+          }}
+        >
+          <Image
+            src={hero[2].image}
+            alt="Image 2"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg shadow-md"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full h-32 relative -mt-16 ml-8"
+          initial={{
+            opacity: 0,
+            x: 50,
+            filter: "blur(20px)",
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0)",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "linear",
+            delay: 1.0,
+          }}
+        >
+          <Image
+            src={hero[3].image}
+            alt="Image 3"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg shadow-md"
+          />
+        </motion.div>
+      </div>
       {/* other carousel item content */}
     </div>
   );

@@ -1,4 +1,5 @@
 {
-  "/campaign/page": "app/campaign/page.js",
-  "/(landing)/page": "app/(landing)/page.js"
+  "/(landing)/page": "app/(landing)/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/campaign/page": "app/campaign/page.js"
 }

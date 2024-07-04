@@ -149,7 +149,7 @@ export const campaign = [
 export const campaign_latest = {
     id:1,
     category: "Creative Resistance",
-    title: "A New Free Burma Campagin",
+    title: "A New Free Burma Campaign",
     date: "20 August 2024",
     content: " A New Burma primarily refers to a creative and activist initiative that showcases contemporary art reflecting the struggles and hopes of Myanmar's people. Founded by Ma Hnin, it organizes exhibitions worldwide, supporting artists both within Myanmar and in exile, with a focus on resistance against the military regime and aspirations for a democratic future​.  ",
     image: "/images/whistle.jpg",
